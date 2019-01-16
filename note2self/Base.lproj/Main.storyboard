@@ -1,24 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Tn-Ki-YiD">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--NOTE 2 SELF-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="Note2SelfVC" customModule="note2self" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IkY-vm-BVh">
+                                <rect key="frame" x="0.0" y="200" width="414" height="662"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="150" id="PP5-5Q-MJw" customClass="NoteCell" customModule="note2self" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PP5-5Q-MJw" id="J2Y-G9-bFb">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="149.66666666666666"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dope-layer" translatesAutoresizingMaskIntoConstraints="NO" id="naZ-fY-Cnc">
+                                                    <rect key="frame" x="0.0" y="2.3333333333333286" width="414" height="146"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="146" id="XZt-mT-1GZ"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What's DOPE!!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPC-NF-yjz">
+                                                    <rect key="frame" x="113" y="54" width="188" height="40"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="naZ-fY-Cnc" firstAttribute="top" secondItem="J2Y-G9-bFb" secondAttribute="top" constant="2" id="FXY-lR-YzA"/>
+                                                <constraint firstAttribute="trailing" secondItem="naZ-fY-Cnc" secondAttribute="trailing" id="OzB-li-jEf"/>
+                                                <constraint firstItem="naZ-fY-Cnc" firstAttribute="leading" secondItem="J2Y-G9-bFb" secondAttribute="leading" id="USE-57-lOc"/>
+                                                <constraint firstAttribute="bottom" secondItem="naZ-fY-Cnc" secondAttribute="bottom" constant="2" id="vFr-ac-1wg"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="noteImage" destination="naZ-fY-Cnc" id="xkz-Km-Y1D"/>
+                                            <outlet property="noteTitle" destination="pPC-NF-yjz" id="onQ-gz-ylL"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a note you'd like to edit below ⬇️" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXp-UC-u4C">
+                                <rect key="frame" x="101" y="118" width="212" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="4ui-oe-sSp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kXp-UC-u4C" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="34F-gx-54r"/>
+                            <constraint firstItem="IkY-vm-BVh" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Fqd-hc-KMp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kXp-UC-u4C" secondAttribute="trailing" constant="101" id="N7Z-tw-sio"/>
+                            <constraint firstItem="kXp-UC-u4C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="101" id="Xoo-CS-9oi"/>
+                            <constraint firstItem="IkY-vm-BVh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dUJ-Va-Yxn"/>
+                            <constraint firstItem="IkY-vm-BVh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fyG-fm-uTB"/>
+                            <constraint firstItem="IkY-vm-BVh" firstAttribute="top" secondItem="kXp-UC-u4C" secondAttribute="bottom" constant="40" id="vgz-5o-Jxs"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="NOTE 2 SELF" id="5PP-qm-7tY"/>
+                    <connections>
+                        <outlet property="tableview" destination="IkY-vm-BVh" id="14h-Ky-6Zs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1049.2753623188407" y="132.58928571428572"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZOr-cP-nSR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Tn-Ki-YiD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kD6-WQ-LLT">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="aUS-yq-8ai"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Nj-Lu-wwj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="399" y="133"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="dope-layer" width="1296" height="864"/>
+    </resources>
 </document>
