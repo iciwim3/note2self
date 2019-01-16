@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4341E5E821EF58C4007E09CA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4341E5E721EF58C4007E09CA /* Constants.swift */; };
 		438D0DD521EEC21A0001E150 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438D0DD421EEC21A0001E150 /* AppDelegate.swift */; };
 		438D0DD721EEC21A0001E150 /* Note2SelfVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438D0DD621EEC21A0001E150 /* Note2SelfVC.swift */; };
 		438D0DDA21EEC21A0001E150 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438D0DD821EEC21A0001E150 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4341E5E721EF58C4007E09CA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		438D0DD121EEC21A0001E150 /* note2self.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = note2self.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		438D0DD421EEC21A0001E150 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		438D0DD621EEC21A0001E150 /* Note2SelfVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note2SelfVC.swift; sourceTree = "<group>"; };
@@ -41,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4341E5E621EF58A9007E09CA /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				4341E5E721EF58C4007E09CA /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		438D0DC821EEC21A0001E150 = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +70,7 @@
 		438D0DD321EEC21A0001E150 /* note2self */ = {
 			isa = PBXGroup;
 			children = (
+				4341E5E621EF58A9007E09CA /* Constants */,
 				438D0DED21EECFFB0001E150 /* Services */,
 				438D0DE821EECE510001E150 /* Model */,
 				438D0DE721EECE4A0001E150 /* View */,
@@ -181,6 +192,7 @@
 				438D0DEA21EECF270001E150 /* Note.swift in Sources */,
 				438D0DEC21EECF850001E150 /* NoteCell.swift in Sources */,
 				438D0DEF21EED0160001E150 /* DataService.swift in Sources */,
+				4341E5E821EF58C4007E09CA /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

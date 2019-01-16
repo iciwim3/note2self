@@ -12,5 +12,10 @@ class NoteCell: UITableViewCell {
 
     @IBOutlet weak var noteImage: UIImageView!
     @IBOutlet weak var noteTitle: UILabel!
+    
+    func updateCell(note: Note) {
+        noteTitle.text = note.title
+        noteImage.image = UIImage(named: note.image)
+    }
 
 }

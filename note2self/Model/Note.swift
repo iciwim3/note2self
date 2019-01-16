@@ -14,8 +14,8 @@ struct Note {
     private(set) public var title: String
     
     init(title: String, image: String) {
-        self.image = title
-        self.title = image
+        self.image = image
+        self.title = title
     }
     
 }
