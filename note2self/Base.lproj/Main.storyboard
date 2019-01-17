@@ -36,7 +36,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What's DOPE!!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPC-NF-yjz">
-                                                    <rect key="frame" x="113" y="54" width="188" height="40"/>
+                                                    <rect key="frame" x="42" y="54" width="330" height="40"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -79,14 +79,47 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="NOTE 2 SELF" id="5PP-qm-7tY"/>
+                    <navigationItem key="navigationItem" title="NOTE 2 SELF" id="5PP-qm-7tY">
+                        <barButtonItem key="backBarButtonItem" title="BACK" id="Ydf-sD-dwX"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableview" destination="IkY-vm-BVh" id="14h-Ky-6Zs"/>
+                        <segue destination="hCp-Oj-dof" kind="show" id="WHO-El-OoY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1049.2753623188407" y="132.58928571428572"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="AhB-eE-My5">
+            <objects>
+                <viewController id="hCp-Oj-dof" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K6D-CU-Tjb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Iaq-p3-CCk">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">I can't get no rest (We in the house) I fall asleep wit' a Tec (Rack)! Stashing all the pills in my desk (Rack) Wearing every chain on my neck (We in the house)! I can't get no rest (Come on) I ride around wit' a Tec. If I take a sip, take the rest...Wearing every chain on my neck!!!</string>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Iaq-p3-CCk" firstAttribute="leading" secondItem="jUd-gr-5qA" secondAttribute="leading" id="Fs7-Aq-ewF"/>
+                            <constraint firstItem="Iaq-p3-CCk" firstAttribute="top" secondItem="jUd-gr-5qA" secondAttribute="top" id="SWd-3D-ADW"/>
+                            <constraint firstItem="Iaq-p3-CCk" firstAttribute="trailing" secondItem="jUd-gr-5qA" secondAttribute="trailing" id="xQo-yE-TdM"/>
+                            <constraint firstItem="Iaq-p3-CCk" firstAttribute="bottom" secondItem="jUd-gr-5qA" secondAttribute="bottom" id="zRQ-PN-Y4I"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jUd-gr-5qA"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u1R-1w-Otg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1721.7391304347827" y="132.58928571428572"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZOr-cP-nSR">
@@ -96,6 +129,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kD6-WQ-LLT">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
